@@ -10,11 +10,11 @@ import pages.PaginaPrincipal;
 public class LoginSteps {
 
     LoginPage login = new LoginPage();
-    PaginaPrincipal chrome = new PaginaPrincipal();
+    PaginaPrincipal paginaPrincipal = new PaginaPrincipal();
 
     @Given("Me encuentro en Sentra Tasks")
     public void iNavigateToSentraTasks() {
-        chrome.navigateToSentraTasks();
+        paginaPrincipal.navigateToSentraTasks();
     }
 
     @When("Ingreso mis credenciales {string} {string}")
@@ -29,6 +29,6 @@ public class LoginSteps {
 
     @Then("Inicio sesion con mi usuario")
     public void loginUser(){
-
+        org.testng.Assert.assertEquals(login.loginVerification(), "Salir");
     }
 }

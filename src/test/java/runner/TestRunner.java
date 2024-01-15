@@ -10,11 +10,12 @@ import pages.BasePage;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources",
     glue = "steps", //src/test/java/steps
+    tags = ("@Test"),
     plugin = {"pretty","html:target/cucumber-reports"}
 )
 
 public class TestRunner {
-    
+
     @AfterClass
     public static void cleanDriver() throws InterruptedException{
         Thread.sleep(3000);

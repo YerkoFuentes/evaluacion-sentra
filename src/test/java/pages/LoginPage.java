@@ -1,8 +1,5 @@
 package pages;
 
-import org.junit.jupiter.params.shadow.com.univocity.parsers.common.TextWritingException;
-import org.openqa.selenium.NoSuchElementException;
-
 public class LoginPage extends BasePage{
 
     public LoginPage(){
@@ -12,29 +9,19 @@ public class LoginPage extends BasePage{
     private String emailLoginText = "//input[@id='email']";
     private String passwordLoginText = "//input[@id='password']";
     private String ingresarButton = "//button[normalize-space()='Ingresar']";
+    private String loginVerification = "//span[text()='Salir']";
 
 
     public void enterLoginCriteria(String emailLogin, String passwordLogin){
-        try {
-            write(emailLoginText, emailLogin);
-        } catch (TextWritingException e) {
-            System.out.println("No se pudo ingresar el campo Email al iniciar sesion");
-            e.printStackTrace();
-        }
-        try {
-            write(passwordLoginText, passwordLogin);
-        } catch (TextWritingException e) {
-            System.out.println("No se pudo ingresar el campo Password al iniciar sesion");
-            e.printStackTrace();
-        }
+        write(emailLoginText, emailLogin);
+        write(passwordLoginText, passwordLogin);
     }
 
     public void clickOnIngresar(){
-        try {
-            clickElement(ingresarButton);
-        } catch (NoSuchElementException e) {
-            System.out.println("No se encontró el Boton INGRESAR");
-            e.printStackTrace();
-        }
+        clickElement(ingresarButton);
+    }
+
+    public String loginVerification(){
+        return textFromElement(loginVerification);
     }
 }

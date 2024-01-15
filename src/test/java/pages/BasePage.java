@@ -1,6 +1,7 @@
 package pages;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +20,7 @@ public class BasePage {
     static{
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     public BasePage(WebDriver driver){
@@ -31,6 +33,11 @@ public class BasePage {
 
     private WebElement Find(String locator){
         return wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+    }
+
+    protected List<WebElement> FindElements(String string){
+        By locator = By.xpath(string);
+        return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
     }
 
     public static void closeBrowser(){
