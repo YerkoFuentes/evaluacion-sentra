@@ -6,7 +6,7 @@ Feature: Modificar Informacion de Usuario
 
     Background:
     Given Me encuentro en Sentra Tasks
-    When Ingreso mis credenciales "aaaa@gmail.com" "bbbb"
+    When Ingreso mis credenciales "aaaa@gmail.com" "bbbbb"
     And Selecciono ingresar
     Then Inicio sesion con mi usuario
 
@@ -16,13 +16,13 @@ Feature: Modificar Informacion de Usuario
         And Selecciono la opcion "Editar Usuario"
         Then Se levanta la ventana "Modificar Usuario"
 
-    
     Scenario: Se comprueba cambio de contrasena
         Given Como usuario con la sesion iniciada 
         When Voy a mi perfil
         And Selecciono la opcion "Editar Password"
         Then Se levanta la ventana "Cambiar Contrasena"
 
+    
     Scenario Outline: Edito mi usuario
         Given Como usuario con la sesion iniciada 
         When Voy a mi perfil
@@ -43,4 +43,4 @@ Feature: Modificar Informacion de Usuario
         Then Se modifica mi informacion correctamente
         Examples:
             | password    | repeatPassword    |
-            | "bbbb"      | "bbbb"            |
+            | "aaaa"      | "aaaa"            |

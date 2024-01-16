@@ -1,7 +1,6 @@
 package steps;
 
 import org.testng.Assert;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -31,7 +30,7 @@ public class EditUserSteps {
 
     @Then("Se levanta la ventana {string}")
     public void editWindowIsUp(String option){
-        org.testng.Assert.assertTrue(edit.validateWindows(option), option.toLowerCase());
+        Assert.assertTrue(edit.validateWindows(option), option.toLowerCase());
     }
 
     @And("Ingreso mi nombre {string}, apellido {string} y correo {string}")

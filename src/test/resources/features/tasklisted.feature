@@ -6,16 +6,16 @@ Feature: Ver lista de tareas
 
     Background:
     Given Me encuentro en Sentra Tasks
-    When Ingreso mis credenciales "aaaa@gmail.com" "bbbb"
+    When Ingreso mis credenciales "asdss@gmail.com" "bbbb"
     And Selecciono ingresar
     Then Inicio sesion con mi usuario
 
-    Scenario: Despliegue de lista de tareas
+    Scenario: Despliegue de lista sin tareas
     Given Como usuario con logeado
     When Me encuentro en la pestana Home
     Then No se muestran en pantalla las tareas
 
-    Scenario: Despliegue de lista de tareas
+    Scenario: Despliegue de lista con tareas
     Given Como usuario con logeado
     When Me encuentro en la pestana Home
     Then Se muestran en pantalla las tareas

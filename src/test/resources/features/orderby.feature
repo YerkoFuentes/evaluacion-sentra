@@ -33,7 +33,6 @@ Feature: Ordenar tareas por título
         When Selecciono "Fecha Vencimiento" en la grilla de tareas
         Then Las tareas se ordenan de manera descendente
 
-    @Test
     Scenario: Ordenar segun Fecha Vencimiento ascendente
         When Realizo doble click en "fecha vencimiento" dentro de la grilla de tareas
         Then Las tareas se ordenan de manera ascendente

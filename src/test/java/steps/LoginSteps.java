@@ -1,5 +1,7 @@
 package steps;
 
+import org.testng.Assert;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -29,6 +31,6 @@ public class LoginSteps {
 
     @Then("Inicio sesion con mi usuario")
     public void loginUser(){
-        org.testng.Assert.assertEquals(login.loginVerification(), "Salir");
+        Assert.assertEquals(login.loginVerification(), "Salir");
     }
 }

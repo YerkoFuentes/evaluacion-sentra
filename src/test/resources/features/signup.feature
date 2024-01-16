@@ -10,7 +10,7 @@ Feature: Registro de usuario
         When Voy a crear un nuevo usuario
         Then Se levanta la ventana para Registrar Usuario
 
-    @Signup
+    @Signup 
     Scenario Outline: Puedo registrar un usuario en el sitio
         Given Navego hasta el sitio de Sentra Tasks
         When Voy a crear un nuevo usuario
@@ -20,4 +20,4 @@ Feature: Registro de usuario
         Then El usuario es registrado exitosamente
         Examples:
             | username    | lastname  | correo          | password   |
-            | "John"      | "Wickx"   | "aaaa@gmail.com" | "503051"   |
+            | "Johnx"      | "Wickx"   | "aaaax@gmail.com" | "503051"   |

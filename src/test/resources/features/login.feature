@@ -12,4 +12,4 @@ Feature: Inicio de Sesion
     Then Inicio sesion con mi usuario
     Examples:
         | emailLogin        | passwordLogin |
-        | "aaaa@gmail.com"  | "503051"  |
+        | "aaaa@gmail.com"  | "bbbb"  |

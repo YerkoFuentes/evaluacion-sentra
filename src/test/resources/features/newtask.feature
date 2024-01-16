@@ -7,10 +7,11 @@ Feature: Crear nueva tarea
     
     Background:
     Given Me encuentro en Sentra Tasks
-    When Ingreso mis credenciales "aaaa@gmail.com" "bbbb"
+    When Ingreso mis credenciales "asdss@gmail.com" "bbbb"
     And Selecciono ingresar
     Then Inicio sesion con mi usuario
 
+    @Test
     Scenario Outline: Crear tarea
     Given Me encuentro en el home de Sentra Tasks
     When Selecciono Nueva Tarea
