@@ -3,7 +3,7 @@
 En este proyecto se buscó realizar pruebas automatizadas para el sitio Sentra Tasks utilizando Java, Selenium, Cucumber y Gradle.
 El foco de estas pruebas fueron las siguientes funcionalidades:
 
-####Funcionalidades Automatizadas
+#### Funcionalidades Automatizadas
 - Registro de usuario
 - Inicio de sesión
 - Modificar información de usuario
