@@ -27,4 +27,10 @@ Para llevar a cabo la automatización, se utilizó la estructura POM (Page Objec
 
 Para ejecutar los tests creados es necesario ajustar el tag "@Test" dentro de los distintos archivos "features", de esta manera se selecciona el test a ejecutar y luego dentro del Runner se realiza la ejecución.
 
+#### Reporte
+
+Para acceder al reporte generado por el proyecto, el cual cuenta con Screenshots en caso de fallar, por favor acceder a la siguiente URL:
+
+ - https://reports.cucumber.io/report-collections/3e54d4a1-291c-409e-b4c7-5b06e993e622
+
 > By Yerko Fuentes
