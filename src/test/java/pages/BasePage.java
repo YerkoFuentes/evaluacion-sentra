@@ -57,7 +57,12 @@ public class BasePage {
         return Find(locator).getText();
     }
 
+    public String attributeAriaSortFromElement(String locator){
+        return driver.findElement(By.xpath(locator)).getAttribute("aria-sort");
+    }
+
     public boolean elementIsDisplayed(String locator){
         return Find(locator).isDisplayed();
     }
+
 }
